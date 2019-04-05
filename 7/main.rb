@@ -14,9 +14,7 @@ def get_prime_by_order(target_position)
   while order < target_position
     if is_prime?(i)
       order += 1 
-      if order == target_position
-        return i
-      end
+      return i if order == target_position
     end
     i += 1
   end
