@@ -10,12 +10,10 @@ def is_palindrome?(number)
   true
 end
 
-def get_largest_palindrome
-  number_1 = 999
-  number_2 = 999
+def get_largest_palindrome(num1, num2)
   list_of_answers = Hash.new
-  (number_1).downto(number_1/2).each { |i| 
-    (number_2).downto(number_2/2).each { |j| 
+  (num1).downto(num1/2).each { |i| 
+    (num2).downto(num2/2).each { |j| 
       candidate = i * j
       if is_palindrome?(candidate)
         answer = Hash.new
@@ -29,8 +27,8 @@ def get_largest_palindrome
   list_of_answers
 end
 
-def get_largest_bundle
-  hash = get_largest_palindrome
+def get_largest_bundle(num1, num2)
+  hash = get_largest_palindrome(num1, num2)
   largest = { :palindrome => 0, :i => 0, :j => 0 }
   hash.each do |key, value|
     if value[:palindrome] > largest[:palindrome]
@@ -40,5 +38,5 @@ def get_largest_bundle
   largest
 end
 
-puts get_largest_bundle
+puts get_largest_bundle(999, 999)
 
