@@ -15,7 +15,6 @@ def get_prime_factors(number)
     if number % j == 0
       if is_prime?(j)
         prime_factors << j
-        puts j
       end
     end
     j+=1
