@@ -46,4 +46,4 @@ def get_adjacent_product(amount_of_digits)
   get_factor_of_list(list)
 end
 
- puts get_adjacent_product(13)
+puts get_adjacent_product(13)
