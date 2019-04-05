@@ -1,3 +1,6 @@
+# Problem 3: Largest prime factor
+# Answer: 6857
+
 def is_prime?(number)
   for i in 2..number-1
     return false if number % i == 0

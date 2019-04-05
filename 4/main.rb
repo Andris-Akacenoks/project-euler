@@ -1,3 +1,6 @@
+# Problem 4: Largest palindrome product
+# Answer: 906609
+
 def is_palindrome?(number)
   number_array = number.to_s.scan /\d/
   number_array_r = number_array.reverse
