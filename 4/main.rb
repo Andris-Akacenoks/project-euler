@@ -10,20 +10,20 @@ end
 def get_largest_palindrome
   number_1 = 999
   number_2 = 999
-  array_of_candidates = Hash.new
+  list_of_answers = Hash.new
   (number_1).downto(number_1/2).each { |i| 
     (number_2).downto(number_2/2).each { |j| 
       candidate = i * j
       if is_palindrome?(candidate)
-        candidates = Hash.new
-        candidates[:palindrome] = candidate
-        candidates[:i] = i
-        candidates[:j] = j
-        array_of_candidates[candidate] = candidates
+        answer = Hash.new
+        answer[:palindrome] = candidate
+        answer[:i] = i
+        answer[:j] = j
+        list_of_answers[candidate] = answer
       end
     }
   }
-  array_of_candidates
+  list_of_answers
 end
 
 def get_largest_bundle
