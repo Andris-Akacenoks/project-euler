@@ -13,9 +13,7 @@ def get_prime_factors(number)
   j = 2
   (number-1).downto(2).each { |i|
     if number % j == 0
-      if is_prime?(j)
-        prime_factors << j
-      end
+      prime_factors << j if is_prime?(j)
     end
     j+=1
   }
