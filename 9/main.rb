@@ -8,9 +8,7 @@ def get_triplet(product)
       c_squared = (a * a) + (b * b)
       if (Math.sqrt(c_squared) % 1 == 0)
         c = Math.sqrt(c_squared)
-        if (a < b && b < c) && (a + b + c == product)
-          return (a * b * c).to_i
-        end
+        return (a * b * c).to_i if (a < b && b < c) && (a + b + c == product)
       end
     end
   end
