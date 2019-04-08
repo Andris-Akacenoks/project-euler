@@ -1,3 +1,6 @@
+# Problem 11: Largest product in a grid
+# Answer: ?
+
 def get_number_array
   list = []
   source = File.open('numbers.txt').read
