@@ -3,19 +3,13 @@
 require_relative '../utils/integer'
 
 def get_triplet(product)
-  for i in 2..1000
-    for j in 1..(i-1)
-      answer = Hash.new
-      a_squared = j * j
-      b_squared = i * i
-      c_squared = a_squared + b_squared
+  for b in 2..Integer::MAX
+    for a in 1..(b - 1)
+      c_squared = (a * a) + (b * b)
       if (Math.sqrt(c_squared) % 1 == 0)
-        answer[:a] = j
-        answer[:b] = i
-        answer[:c] = Math.sqrt(c_squared)
-        if (answer[:a] < answer[:b] && answer[:b] < answer[:c]) && 
-          (answer[:a] + answer[:b] + answer[:c] == product)
-          return (answer[:a] * answer[:b] * answer[:c]).to_i
+        c = Math.sqrt(c_squared)
+        if (a < b && b < c) && (a + b + c == product)
+          return (a * b * c).to_i
         end
       end
     end
